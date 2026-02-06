@@ -4,8 +4,13 @@ public class projectile_script : MonoBehaviour
 {public Transform player;
 public Vector3 playerPosition;
 public float speed;
+private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
 private void Start()
     {
+        
         playerPosition = player.position;
     }
 private void Update()

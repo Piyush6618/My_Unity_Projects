@@ -11,13 +11,21 @@ private void OnCollisionEnter(Collision collision)
     hitcount++;
     Debug.Log("player has collided" + hitcount + "times");
 
-   if (collision.gameObject.CompareTag("obstacle")){
-     MeshRenderer meshRenderer = collision.gameObject.GetComponent<MeshRenderer>();
-    Material material = meshRenderer.material;
-    material.color = Color.black;
+   if (collision.gameObject.CompareTag("obstacle"))
+    {
+        changeColor(collision.gameObject,Color.black);
+
+    
+   
    }
     
 
   }
-
+private void changeColor(GameObject gameObject,Color color)
+  {
+    MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
+    Material material = meshRenderer.material;
+    material.color = color;
+    
+  }
 }
