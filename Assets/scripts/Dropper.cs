@@ -11,7 +11,7 @@ public class Dropper : MonoBehaviour
     }
     private void Update ()
     {
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         if (Time.time > timer)   
         {
             rb.useGravity = true;
